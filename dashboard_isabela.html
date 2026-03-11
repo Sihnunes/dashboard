@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Dashboard CS · 2026</title>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=DM+Serif+Display&family=Inter:wght@300;400;500;600;700&family=Lato:wght@300;400;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js"></script>
 <style>
 :root{
@@ -138,15 +138,7 @@ td.ec{padding:0;background:var(--s2)}
   <div style="display:flex;align-items:center;gap:10px">
     <span class="ytag">2026</span>
 
-    <div style="display:flex;align-items:center;gap:6px;background:var(--s2);border:1px solid var(--border);border-radius:6px;padding:4px 8px">
-      <span style="font-size:10px;color:var(--muted);font-weight:600;letter-spacing:.04em">Aa</span>
-      <select id="font-selector" onchange="applyFont(this.value)" style="font-size:11px;border:none;background:transparent;color:var(--text);cursor:pointer;outline:none;font-weight:600;padding:0 2px">
-        <option value="DM Sans">DM Sans</option>
-        <option value="Inter">Inter</option>
-        <option value="Lato">Lato</option>
-        <option value="Poppins">Poppins</option>
-      </select>
-    </div>
+
 
   </div>
 </header>
@@ -378,8 +370,8 @@ function nums(arr) { return arr.filter(v => v !== null && v !== undefined && v !
 const AREA_KPIS = [
   { id:'tickets',  label:'Total de Tickets',        meta:null,  metaVal:null, dir:'max', unit:'',     data:[1436,1415,...n12().slice(2)] },
   { id:'tma',      label:'Tempo Médio 1ª Resposta',        meta:'≤20 min',metaVal:20,  dir:'min', unit:' min', data:[57,24,...n12().slice(2)] },
-  { id:'reab',     label:'Tickets Reabertos',       meta:'≤20%',   metaVal:20,  dir:'min', unit:'%',    data:[22,22,...n12().slice(2)] },
   { id:'fcr',      label:'Resolvidos no 1° Contato',     meta:'≥50%',   metaVal:50,  dir:'max', unit:'%',    data:[36.7,47.3,...n12().slice(2)] },
+  { id:'reab',     label:'Tickets Reabertos',       meta:'≤20%',   metaVal:20,  dir:'min', unit:'%',    data:[22,22,...n12().slice(2)] },
   { id:'slaWp',    label:'SLA WhatsApp',      meta:'≥50%',   metaVal:50,  dir:'max', unit:'%',    data:[28,38,...n12().slice(2)] },
   { id:'slaEmail', label:'SLA E-mail',               meta:'≥95%',   metaVal:95,  dir:'max', unit:'%',    data:[89,95,...n12().slice(2)] },
 ];
@@ -409,8 +401,8 @@ const T_CSAT = {
 const T_KPIS = [
   { id:'tickets',  label:'Total de Tickets',        meta:null,     metaVal:null, dir:'max', unit:'',     data:[514,642,...n12().slice(2)] },
   { id:'tma',      label:'Tempo Médio 1ª Resposta',        meta:'≤20 min',metaVal:20,  dir:'min', unit:' min', data:[48,29,...n12().slice(2)] },
-  { id:'reab',     label:'Tickets Reabertos',       meta:'≤20%',   metaVal:20,  dir:'min', unit:'%',    data:[23.3,23.3,...n12().slice(2)] },
   { id:'fcr',      label:'Resolvidos no 1° Contato',     meta:'≥50%',   metaVal:50,  dir:'max', unit:'%',    data:[37,37.1,...n12().slice(2)] },
+  { id:'reab',     label:'Tickets Reabertos',       meta:'≤20%',   metaVal:20,  dir:'min', unit:'%',    data:[23.3,23.3,...n12().slice(2)] },
   { id:'slaWp',    label:'SLA WhatsApp',      meta:'≥50%',   metaVal:50,  dir:'max', unit:'%',    data:[26,34,...n12().slice(2)] },
   { id:'slaEmail', label:'SLA E-mail',               meta:'≥95%',   metaVal:95,  dir:'max', unit:'%',    data:[92,96,...n12().slice(2)] },
 ];
@@ -428,8 +420,8 @@ const I_CSAT = {
 const I_KPIS = [
   { id:'tickets',  label:'Total de Tickets',        meta:null,     metaVal:null, dir:'max', unit:'',     data:[520,510,...n12().slice(2)] },
   { id:'tma',      label:'Tempo Médio 1ª Resposta',        meta:'≤20 min',metaVal:20,  dir:'min', unit:' min', data:[50,32,...n12().slice(2)] },
-  { id:'reab',     label:'Tickets Reabertos',       meta:'≤20%',   metaVal:20,  dir:'min', unit:'%',    data:[25,24,...n12().slice(2)] },
   { id:'fcr',      label:'Resolvidos no 1° Contato',     meta:'≥50%',   metaVal:50,  dir:'max', unit:'%',    data:[35,38,...n12().slice(2)] },
+  { id:'reab',     label:'Tickets Reabertos',       meta:'≤20%',   metaVal:20,  dir:'min', unit:'%',    data:[25,24,...n12().slice(2)] },
   { id:'slaWp',    label:'SLA WhatsApp',      meta:'≥50%',   metaVal:50,  dir:'max', unit:'%',    data:[22,30,...n12().slice(2)] },
   { id:'slaEmail', label:'SLA E-mail',               meta:'≥95%',   metaVal:95,  dir:'max', unit:'%',    data:[88,90,...n12().slice(2)] },
 ];
@@ -922,10 +914,7 @@ function clearAllCells() {
 }
 
 function applyFont(font) {
-  document.body.style.fontFamily = `'${font}', sans-serif`;
-  document.querySelectorAll('.ci, .btn').forEach(el => el.style.fontFamily = `'${font}', sans-serif`);
-  Chart.defaults.font.family = `'${font}', sans-serif`;
-  refreshDash();
+  // reserved for future use
 }
 
 function showToast(msg, type) {
@@ -1001,7 +990,7 @@ function init() {
   renderAnalystCharts('i');
 }
 init();
-document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+document.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));
 document.getElementById('tab-isabela').classList.add('active');
 </script>
 </body>
