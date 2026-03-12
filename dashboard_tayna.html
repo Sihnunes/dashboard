@@ -532,11 +532,11 @@ const AREA_KPIS = [
   { id:'slaEmail', label:'SLA E-mail',               meta:'≥95%',   metaVal:95,  dir:'max', unit:'%',    data:[89,95,...n12().slice(2)] },
 ];
 // Area CSAT (from merged analyst data — editable separately)
-const AREA_CSAT = { data: [90.43, 82.71, ...n12().slice(2)], metaVal: 88 };
+const AREA_CSAT = { data: [90.43, 82.71, ...n12().slice(2)], metaVal: 90 };
 
 // ÁREA CSAT table (aggregated — all analysts combined)
 const AREA_CSAT_TABLE = {
-  meta: { csat:89, neutro:5, neg:8, txResp:20 },
+  meta: { csat:90, neutro:4, neg:6, txResp:25 },
   rows: [
     { solic:861, respostas:136, csat:90, neutro:5,  neg:5  },
     { solic:844, respostas:129, csat:83, neutro:6,  neg:11 },
@@ -546,7 +546,7 @@ const AREA_CSAT_TABLE = {
 
 // TAYNA CSAT table
 const T_CSAT = {
-  meta: { csat:88, neutro:5, neg:8, txResp:20 },
+  meta: { csat:90, neutro:4, neg:6, txResp:25 },
   rows: [
     { solic:415, respostas:78,  csat:91, neutro:3, neg:6  },
     { solic:424, respostas:74,  csat:89, neutro:5, neg:5  },
@@ -565,7 +565,7 @@ const T_KPIS = [
 
 // ISABELA CSAT table
 const I_CSAT = {
-  meta: { csat:88, neutro:5, neg:8, txResp:20 },
+  meta: { csat:90, neutro:4, neg:6, txResp:25 },
   rows: [
     { solic:446, respostas:58,  csat:74, neutro:7, neg:19 },
     { solic:420, respostas:55,  csat:71, neutro:8, neg:21 },
