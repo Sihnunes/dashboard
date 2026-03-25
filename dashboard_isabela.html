@@ -139,7 +139,8 @@ td.ec{padding:0;background:var(--s2)}
   <div style="display:flex;align-items:center;gap:10px">
     <span class="ytag">2026</span>
 
-    <span id="autosave-ind" style="font-size: 10px; font-weight: 700; color: var(--green); opacity: 0; transition: opacity 0.4s;">✓ Salvo</span>
+
+
 
   </div>
 </header>
@@ -1083,12 +1084,12 @@ const T_CSAT = {
 };
 // TAYNA KPIs
 const T_KPIS = [
-  { id:'tickets',  label:'Total de Tickets',        meta:null,     metaVal:null, dir:'max', unit:'',     data:[514,642,337,...n12().slice(3)] },
-  { id:'tma',      label:'Tempo Médio 1ª Resposta',        meta:'≤12 min',metaVal:12,  dir:'min', unit:' min', data:[48,29,22,...n12().slice(3)] },
-  { id:'fcr',      label:'Resolvidos no 1° Contato',     meta:'≥50%',   metaVal:50,  dir:'max', unit:'%',    data:[37,37.1,37.4,...n12().slice(3)] },
-  { id:'reab',     label:'Tickets Reabertos',       meta:'≤15%',   metaVal:15,  dir:'min', unit:'%',    data:[23.3,23.3,23.5,...n12().slice(3)] },
-  { id:'slaWp',    label:'SLA WhatsApp',      meta:'≥60%',   metaVal:60,  dir:'max', unit:'%',    data:[26,34,33,...n12().slice(3)] },
-  { id:'slaEmail', label:'SLA E-mail',               meta:'≥95%',   metaVal:95,  dir:'max', unit:'%',    data:[92,96,96,...n12().slice(3)] },
+  { id:'tickets',  label:'Total de Tickets',        meta:null,     metaVal:null, dir:'max', unit:'',     data:[514, 642, 520, null, null, null, null, null, null, null, null, null] },
+  { id:'tma',      label:'Tempo Médio 1ª Resposta',        meta:'≤12 min',metaVal:12,  dir:'min', unit:' min', data:[48, 29, 27, null, null, null, null, null, null, null, null, null] },
+  { id:'fcr',      label:'Resolvidos no 1° Contato',     meta:'≥50%',   metaVal:50,  dir:'max', unit:'%',    data:[37, 37.1, 37.1, null, null, null, null, null, null, null, null, null] },
+  { id:'reab',     label:'Tickets Reabertos',       meta:'≤15%',   metaVal:15,  dir:'min', unit:'%',    data:[23.3, 23.3, 22.9, null, null, null, null, null, null, null, null, null] },
+  { id:'slaWp',    label:'SLA WhatsApp',      meta:'≥60%',   metaVal:60,  dir:'max', unit:'%',    data:[25, 33, 33, null, null, null, null, null, null, null, null, null] },
+  { id:'slaEmail', label:'SLA E-mail',               meta:'≥95%',   metaVal:95,  dir:'max', unit:'%',    data:[90, 94, 95, null, null, null, null, null, null, null, null, null] },
 ];
 
 // ISABELA CSAT table
@@ -1097,18 +1098,18 @@ const I_CSAT = {
   rows: [
     { solic:446, respostas:58,  csat:74, neutro:7, neg:19 },
     { solic:420, respostas:55,  csat:71, neutro:8, neg:21 },
-    { solic:270, respostas:35,  csat:77, neutro:3, neg:20 },
+    { solic:372, respostas:64,  csat:75, neutro:3, neg:22 },
     ...Array(9).fill(null)
   ]
 };
 // ISABELA KPIs
 const I_KPIS = [
-  { id:'tickets',  label:'Total de Tickets',        meta:null,     metaVal:null, dir:'max', unit:'',     data:[520,510,304,...n12().slice(3)] },
-  { id:'tma',      label:'Tempo Médio 1ª Resposta',        meta:'≤12 min',metaVal:12,  dir:'min', unit:' min', data:[50,32,10,...n12().slice(3)] },
-  { id:'fcr',      label:'Resolvidos no 1° Contato',     meta:'≥50%',   metaVal:50,  dir:'max', unit:'%',    data:[35,38,41.6,...n12().slice(3)] },
-  { id:'reab',     label:'Tickets Reabertos',       meta:'≤15%',   metaVal:15,  dir:'min', unit:'%',    data:[25,24,28.2,...n12().slice(3)] },
-  { id:'slaWp',    label:'SLA WhatsApp',      meta:'≥60%',   metaVal:60,  dir:'max', unit:'%',    data:[22,30,62,...n12().slice(3)] },
-  { id:'slaEmail', label:'SLA E-mail',               meta:'≥95%',   metaVal:95,  dir:'max', unit:'%',    data:[88,90,100,...n12().slice(3)] },
+  { id:'tickets',  label:'Total de Tickets',        meta:null,     metaVal:null, dir:'max', unit:'',     data:[520, 510, 460, null, null, null, null, null, null, null, null, null] },
+  { id:'tma',      label:'Tempo Médio 1ª Resposta',        meta:'≤12 min',metaVal:12,  dir:'min', unit:' min', data:[50, 32, 10, null, null, null, null, null, null, null, null, null] },
+  { id:'fcr',      label:'Resolvidos no 1° Contato',     meta:'≥50%',   metaVal:50,  dir:'max', unit:'%',    data:[35, 38, 41.8, null, null, null, null, null, null, null, null, null] },
+  { id:'reab',     label:'Tickets Reabertos',       meta:'≤15%',   metaVal:15,  dir:'min', unit:'%',    data:[25, 24, 30.1, null, null, null, null, null, null, null, null, null] },
+  { id:'slaWp',    label:'SLA WhatsApp',      meta:'≥60%',   metaVal:60,  dir:'max', unit:'%',    data:[29, 47, 63, null, null, null, null, null, null, null, null, null] },
+  { id:'slaEmail', label:'SLA E-mail',               meta:'≥95%',   metaVal:95,  dir:'max', unit:'%',    data:[86, 97, 99, null, null, null, null, null, null, null, null, null] },
 ];
 
 // ══════════════════════════════════════════
@@ -1648,6 +1649,68 @@ function applyFont(font) {
   // reserved for future use
 }
 
+function saveHTMLWithData() {
+  // Sync all inputs to data arrays
+  document.querySelectorAll('#t-kpi-tbody tr').forEach((tr, ri) => {
+    tr.querySelectorAll('.ci').forEach((inp, mi) => {
+      if (T_KPIS[ri]) T_KPIS[ri].data[mi] = inp.value === '' ? null : parseFloat(inp.value);
+    });
+  });
+  document.querySelectorAll('#i-kpi-tbody tr').forEach((tr, ri) => {
+    tr.querySelectorAll('.ci').forEach((inp, mi) => {
+      if (I_KPIS[ri]) I_KPIS[ri].data[mi] = inp.value === '' ? null : parseFloat(inp.value);
+    });
+  });
+  const csatFields = ['solic','respostas','csat','neutro','neg'];
+  document.querySelectorAll('#t-csat-tbody tr').forEach((tr, ri) => {
+    if (ri === 0) return;
+    const mi = ri - 1;
+    if (!T_CSAT.rows[mi]) T_CSAT.rows[mi] = {solic:null,respostas:null,csat:null,neutro:null,neg:null};
+    tr.querySelectorAll('.ci').forEach((inp, fi) => {
+      if (csatFields[fi]) T_CSAT.rows[mi][csatFields[fi]] = inp.value === '' ? null : parseFloat(inp.value);
+    });
+  });
+  document.querySelectorAll('#i-csat-tbody tr').forEach((tr, ri) => {
+    if (ri === 0) return;
+    const mi = ri - 1;
+    if (!I_CSAT.rows[mi]) I_CSAT.rows[mi] = {solic:null,respostas:null,csat:null,neutro:null,neg:null};
+    tr.querySelectorAll('.ci').forEach((inp, fi) => {
+      if (csatFields[fi]) I_CSAT.rows[mi][csatFields[fi]] = inp.value === '' ? null : parseFloat(inp.value);
+    });
+  });
+
+  // Build snapshot script
+  const snapshot = '<scr'+'ipt id="data-snapshot">\n' +
+    '(function(){\n' +
+    'var _td=' + JSON.stringify(T_KPIS.map(function(k){return k.data;})) + ';\n' +
+    'var _id=' + JSON.stringify(I_KPIS.map(function(k){return k.data;})) + ';\n' +
+    'var _tc=' + JSON.stringify(T_CSAT.rows) + ';\n' +
+    'var _ic=' + JSON.stringify(I_CSAT.rows) + ';\n' +
+    'window.__dataSnapshot={td:_td,id:_id,tc:_tc,ic:_ic};\n' +
+    '})();\n' +
+    '<\/script>';
+
+  // Get HTML, remove old snapshot, inject new one
+  var html = document.documentElement.outerHTML;
+  html = html.replace(/<script id="data-snapshot">[\s\S]*?<\/script>\n?/g, '');
+  html = html.replace('<\/head>', snapshot + '\n</head>');
+
+  // Also inject restore call before init
+  html = html.replace(
+    'const restored = autoRestore();',
+    'if(window.__dataSnapshot){var s=window.__dataSnapshot;s.td.forEach(function(d,i){if(T_KPIS[i])T_KPIS[i].data=d;});s.id.forEach(function(d,i){if(I_KPIS[i])I_KPIS[i].data=d;});T_CSAT.rows=s.tc;I_CSAT.rows=s.ic;}\nconst restored = autoRestore();'
+  );
+
+  var a = document.createElement('a');
+  a.href = 'data:text/html;charset=utf-8,' + encodeURIComponent(html);
+  a.download = 'dashboard-' + new Date().toISOString().slice(0,10) + '.html';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  showToast('HTML salvo com dados embutidos!', 'ok');
+}
+
+
 function autoSave() {
   try {
     const payload = {
@@ -1658,7 +1721,6 @@ function autoSave() {
       I_CSAT_rows: I_CSAT.rows,
     };
     localStorage.setItem('cx-analytics-2026', JSON.stringify(payload));
-    // show subtle indicator
     const ind = document.getElementById('autosave-ind');
     if (ind) { ind.textContent = '✓ Salvo'; ind.style.opacity = '1'; setTimeout(() => ind.style.opacity = '0', 1500); }
   } catch(e) {}
@@ -1754,7 +1816,7 @@ function init() {
 }
 autoRestore();
 init();
-document.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));
+document.querySelectorAll('.panel').forEach(function(p){p.classList.remove('active');});
 document.getElementById('tab-isabela').classList.add('active');
 </script>
 
